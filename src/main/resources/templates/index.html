@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="fragments/_header :: head(pageTitle='Thymeleaf Page Navigation Walkthrough')"></head>
 <body>
-$END$
+<div th:insert="fragments/_header :: header"></div>
+<h2>Welcome!</h2>
+<p>
+    These pages should teach you how to set up navigation between your webpages by utilizing Thymeleaf.
+</p>
+<p>
+    Press the button below to get started
+</p>
+<br/>
+<br/>
+<a th:href="@{/step-one}" class="ui-button">Start</a>
 </body>
 </html>

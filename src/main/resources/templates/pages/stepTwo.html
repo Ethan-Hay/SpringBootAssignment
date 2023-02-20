@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="fragments/_header :: head(pageTitle='Step Two')">
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
-$END$
+<div th:insert="fragments/_header :: header"></div>
+
+<h2>
+    Step Two: Writing a Controller
+</h2>
+<p>
+    Create a Java class in your java folder where the main class is. Before the main method of the new class put @Controller. This makes the class a controller class. Next, type out the linking methods using Request Mapping, Get Mapping, and/or Post Mapping.
+</p>
+<br/>
+<br/>
+<a th:href="@{/step-one}" class="ui-button">Back</a>
+<a th:href="@{/step-three" class="ui-button">Next</a>
 </body>
 </html>

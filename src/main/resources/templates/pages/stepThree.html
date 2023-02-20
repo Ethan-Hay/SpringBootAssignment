@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="fragments/_header :: head(pageTitle='Step Three')">
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
-$END$
+<div th:insert="fragments/_header :: header"></div>
+
+<h2>
+    Step Three: Testing Connections via Postman
+</h2>
+<p>
+    Run the main class and open up Postman if you already have it installed. Type in the correct LocalHost link followed by the pathways you set up in step one. If everything works you should see the webpage you associated with the pathway in the controller you set up in step two. Congratulations!
+</p>
+<br/>
+<br/>
+<a th:href="@{/step-two}" class="ui-button">Back</a>
 </body>
 </html>
